@@ -24,7 +24,29 @@ export const metadata: Metadata = {
     apple: [
       { url: '/apple-icon.svg', sizes: '180x180', type: 'image/svg+xml' }
     ]
-  }
+  },
+  openGraph: {
+    title: "Blank Survey - Email Collection",
+    description: "Help us improve by sharing your email for our upcoming survey",
+    url: "https://blank-survey-help.vercel.app/",
+    siteName: "Blank Survey",
+    images: [
+      {
+        url: '/favicon.ico', // Using favicon.ico for better compatibility
+        width: 32,
+        height: 32,
+        alt: 'Blank Survey Logo',
+      }
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: "Blank Survey - Email Collection",
+    description: "Help us improve by sharing your email for our upcoming survey",
+    images: ['/favicon.ico'],
+  },
 };
 
 export default function RootLayout({
