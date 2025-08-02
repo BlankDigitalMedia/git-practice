@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import { useMutation, useQuery } from "convex/react";
+import { useMutation } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -69,7 +68,7 @@ export default function Home() {
             </CardTitle>
             <CardDescription>
               {isSubmitted 
-                ? "We appreciate your participation! We'll be in touch soon." 
+                ? "We appreciate your participation! We&apos;ll be in touch soon." 
                 : "Enter your email address to participate in our survey"
               }
             </CardDescription>
@@ -83,7 +82,7 @@ export default function Home() {
                     Thank you for your help!
                   </p>
                   <p className="text-sm text-muted-foreground mt-2">
-                    Your email has been recorded and we'll send you the survey soon.
+                    Your email has been recorded and we&apos;ll send you the survey soon.
                   </p>
                 </div>
                 <Button 
