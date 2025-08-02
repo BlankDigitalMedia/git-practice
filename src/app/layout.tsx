@@ -32,9 +32,9 @@ export const metadata: Metadata = {
     siteName: "Blank Survey",
     images: [
       {
-        url: '/favicon.ico', // Using favicon.ico for better compatibility
-        width: 32,
-        height: 32,
+        url: '/icon.svg', // Using your nice heart icon
+        width: 1200,
+        height: 630,
         alt: 'Blank Survey Logo',
       }
     ],
@@ -42,10 +42,10 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: "Blank Survey - Email Collection",
     description: "Help us improve by sharing your email for our upcoming survey",
-    images: ['/favicon.ico'],
+    images: ['/icon.svg'],
   },
 };
 
