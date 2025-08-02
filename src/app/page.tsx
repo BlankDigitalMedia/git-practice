@@ -7,6 +7,7 @@ import { api } from "../../convex/_generated/api";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { HeartHandshake } from "lucide-react";
 
 export default function Home() {
   const [email, setEmail] = useState("");
@@ -15,7 +16,6 @@ export default function Home() {
   const [error, setError] = useState("");
 
   const submitEmail = useMutation(api.emails.submitEmail);
-  const submissionCount = useQuery(api.emails.getSubmissionCount);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -50,7 +50,7 @@ export default function Home() {
   };
 
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-8 row-start-2 items-center justify-center max-w-md w-full">
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-bold tracking-tight">Blank Survey</h1>
@@ -60,11 +60,6 @@ export default function Home() {
           <p className="text-sm text-muted-foreground">
             Part of the Convex Resend Component hackathon
           </p>
-          {submissionCount !== undefined && (
-            <p className="text-sm text-muted-foreground/80">
-              {submissionCount} {submissionCount === 1 ? 'person has' : 'people have'} joined so far
-            </p>
-          )}
         </div>
 
         <Card className="w-full">
@@ -83,7 +78,7 @@ export default function Home() {
             {isSubmitted ? (
               <div className="space-y-4">
                 <div className="text-center py-8">
-                  <div className="text-6xl mb-4">✨</div>
+                  <HeartHandshake className="w-16 h-16 mx-auto mb-4 text-green-600 dark:text-green-400" />
                   <p className="text-lg font-medium text-green-600 dark:text-green-400">
                     Thank you for your help!
                   </p>
