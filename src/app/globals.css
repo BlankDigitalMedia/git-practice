@@ -39,6 +39,7 @@
   --font-sans: Albert Sans, ui-sans-serif, sans-serif, system-ui;
   --font-serif: Georgia, serif;
   --font-mono: Fira Code, monospace;
+  --font-heading: Space Grotesk, ui-sans-serif, sans-serif, system-ui;
   --radius: 0.35rem;
   --shadow-2xs: 0px 2px 0px 0px hsl(0 0% 20% / 0.07);
   --shadow-xs: 0px 2px 0px 0px hsl(0 0% 20% / 0.07);
@@ -158,5 +159,14 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-space-grotesk), ui-sans-serif, sans-serif, system-ui;
+  }
+  .font-body {
+    font-family: var(--font-albert-sans), ui-sans-serif, sans-serif, system-ui;
   }
 }

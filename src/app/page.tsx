@@ -52,21 +52,21 @@ export default function Home() {
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <main className="flex flex-col gap-8 row-start-2 items-center justify-center max-w-md w-full">
         <div className="text-center space-y-4">
-          <h1 className="text-4xl font-bold tracking-tight">Blank Survey</h1>
-          <p className="text-xl text-muted-foreground">
+          <h1 className="text-4xl font-bold tracking-tight font-heading">Blank Survey</h1>
+          <p className="text-xl text-muted-foreground font-body">
             Help us improve by sharing your email for our upcoming survey
           </p>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-muted-foreground font-body">
             Part of the Convex Resend Component hackathon
           </p>
         </div>
 
         <Card className="w-full">
           <CardHeader className="text-center">
-            <CardTitle>
+            <CardTitle className="font-heading">
               {isSubmitted ? "Thank you!" : "Join Our Survey"}
             </CardTitle>
-            <CardDescription>
+            <CardDescription className="font-body">
               {isSubmitted 
                 ? "We appreciate your participation! We&apos;ll be in touch soon." 
                 : "Enter your email address to participate in our survey"
@@ -78,10 +78,10 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="text-center py-8">
                   <HeartHandshake className="w-16 h-16 mx-auto mb-4 text-green-600 dark:text-green-400" />
-                  <p className="text-lg font-medium text-green-600 dark:text-green-400">
+                  <p className="text-lg font-medium text-green-600 dark:text-green-400 font-heading">
                     Thank you for your help!
                   </p>
-                  <p className="text-sm text-muted-foreground mt-2">
+                  <p className="text-sm text-muted-foreground mt-2 font-body">
                     Your email has been recorded and we&apos;ll send you the survey soon.
                   </p>
                 </div>
@@ -106,7 +106,7 @@ export default function Home() {
                     className="w-full"
                   />
                   {error && (
-                    <p className="text-sm text-red-600 dark:text-red-400">
+                    <p className="text-sm text-red-600 dark:text-red-400 font-body">
                       {error}
                     </p>
                   )}

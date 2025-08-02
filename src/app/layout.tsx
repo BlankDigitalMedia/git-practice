@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
-import { Albert_Sans, Fira_Code } from "next/font/google";
+import { Albert_Sans, Fira_Code, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ConvexClientProvider } from "./ConvexClientProvider";
 
 const albertSans = Albert_Sans({
   variable: "--font-albert-sans",
+  subsets: ["latin"],
+});
+
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
 });
 
@@ -57,7 +62,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${albertSans.variable} ${firaCode.variable} font-sans antialiased`}
+        className={`${albertSans.variable} ${spaceGrotesk.variable} ${firaCode.variable} font-body antialiased`}
       >
         <ConvexClientProvider>
           {children}
